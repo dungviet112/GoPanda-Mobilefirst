@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>GoPanda Mobile-First</title>
+    <!--[if lte IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="main">
+    <header>
+        <nav class="nav">
+            <div class="brand">
+                <a href=""><img src="assets/image/logo.png" alt=""></a>
+            </div>
+
+            <!--                nav-pc-->
+            <nav class="nav__pc">
+                <ul class="nav__list">
+                    <li><a href="" class="nav__link">HOLIDAYS</a></li>
+                    <li><a href="" class="nav__link">DESTINATIONS</a></li>
+                    <li><a href="" class="nav__link">FLIGHTS</a></li>
+                    <li><a href="" class="nav__link">HOTELS</a></li>
+                    <li class="nav-item dropdown nav">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false" style="color: rgba(0,0,0,.55);">
+                            <img src="assets/image/us.png" alt=""> EN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#"><img src="assets/image/us.png" alt=""> EN</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="assets/image/2.png" alt=""> VN</a></li>
+                        </ul>
+                    </li>
+                    <Li><a class="nav__link" href="#" id="login">Log in</a></Li>
+                    <Li>
+                        <button type="button" class="btn btn-success" id="sign-up">Sign up</button>
+                    </Li>
+                </ul>
+            </nav>
+
+            <label for="nav-mobile-input" class="nav__bars-btn">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                     class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                </svg>
+            </label>
+            <input type="checkbox" hidden class="nav__input" id="nav-mobile-input">
+            <label for="nav-mobile-input" class="nav__overlay"></label>
+
+            <nav class="nav__mobile">
+                <ul class="nav__mobile-list">
+                    <li><a href="" class="nav__mobile-link">HOLIDAYS</a></li>
+                    <li><a href="" class="nav__mobile-link">DESTINATIONS</a></li>
+                    <li><a href="" class="nav__mobile-link">FLIGHTS</a></li>
+                    <li><a href="" class="nav__mobile-link">HOTELS</a></li>
+                    <Li><a class="nav__link" href="#" id="login-mobile">Log in</a></Li>
+                    <Li>
+                        <button type="button" class="btn btn-success" id="sign-up-mobile">Sign up</button>
+                    </Li>
+                </ul>
+                <label for="nav-mobile-input" class="nav__mobile-close">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
+                         class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 352 512">
+                        <path fill="currentColor"
+                              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                    </svg>
+                </label>
+            </nav>
+        </nav>
+        <div class="banner-intro">
+            <div class="banner-container" id="search">
+                <div class="centered" id="center-banner">
+                    <div class="banner-content">
+                        <div class="banner-heading"><h1>Search your next Trip</h1></div>
+                        <div class="banner-descripsion"><p>Trips, experiences and places. All in one service.</p></div>
+                        <div class="search-form" style="position: absolute; width: 100%">
+                            <form class="d-flex search">
+                                <input class="form-control" type="search" placeholder="Choose your destination"
+                                       aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"
+                                        style="background-color: #38C860; border: none"><img
+                                        src="assets/image/search.png" alt=""></button>
+                            </form>
+                            <div class="hot-search">
+                                <a href="">Great Wall</a>
+                                <a href="">Shanghai</a>
+                                <a href="">Forbidden City</a>
+                                <a href="">Guangzhou</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="service" style="margin-top: 40px">
+        <div class="grid-service">
+
+            <div class="service-container">
+                <a href=""><img src="assets/image/002-discount.png" alt=""></a>
+                <h5>BEST PRICE GUARANTEE</h5>
+                <p>With 500+ suppliers and the purchasing power of 300 million members, Gopanda can save you
+                    more!</p>
+            </div>
+
+            <div class="service-container">
+                <a href=""><img src="assets/image/003-china.png" alt=""></a>
+                <h5>TRAVEL EVERYWHERE IN CHINA</h5>
+                <p>Travel worry-free knowing that we're here if you need us, 24 hours a day</p>
+            </div>
+
+            <div class="service-container">
+                <a href=""><img src="assets/image/001-customer-service.png" alt=""></a>
+                <h5>CUSTOM CARE 24/7</h5>
+                <p>Cheap Domestic Flights, International Cheap Flights</p>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="assets/image/Frame.png" alt="frame" class="center">
+
+    <div class="deals">
+        <h3 style="text-align: center; margin-bottom: 40px">TODAY TOP DEALS</h3>
+        <div class="grid-deals">
+
+            <div class="deals-container">
+                <a href=""><img src="assets/image/topdeals1.png" alt=""></a>
+                <h5>Guangzhou Tour Package</h5>
+                <p>Book hotels to earn 3 Aviors for every $1 spent!</p>
+            </div>
+
+            <div class="deals-container">
+                <a href=""><img src="assets/image/topdeals2.png" alt=""></a>
+                <h5>Kunming Tour Package</h5>
+                <p>Enjoy savings of 5% and up on Japan hotels, and save even more with our promo codes</p>
+            </div>
+
+            <div class="deals-container">
+                <a href=""><img src="assets/image/topdeals3.png" alt=""></a>
+                <h5>Beijing Tour Package</h5>
+                <p>Make a hotel booking and receive reward points after completing your stay!</p>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="assets/image/Frame.png" alt="frame" class="center">
+
+    <div class="package">
+        <h3 style="text-align: center; margin-bottom: 40px">OURS PACKAGE</h3>
+        <div class="grid-package">
+
+            <div class="card">
+                <img src="assets/image/pk1.png" class="card-img-top" alt="...">
+                <div class="best-package">
+                    <img src="assets/image/bestpk.png" alt="" class="best">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">5 days in Fenghuang Country, Zhangjiajie, and Changsha </h5>
+                    <p>From <span>$988</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">5 days in Nanjing, Wuxi, Suzhou, Hangzhou and...</h5>
+                    <p>From <span>$1200</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk3.png" class="card-img-top" alt="...">
+                <div class="best-package">
+                    <img src="assets/image/bestpk.png" alt="" class="best">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">5 days in Dali, Lijiang, Shangri-La City, and Kunming</h5>
+                    <p>From <span>$988</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk4.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">7 days in Beijing, Xian, Guilin and Shanghai</h5>
+                    <p>From <span>$1188</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk5.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">5 days in Ngawa Tibetan and Qiang Autonomous Prefecture...</h5>
+                    <p>From <span>$988</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk6.png" class="card-img-top" alt="...">
+                <div class="best-package">
+                    <img src="assets/image/bestpk.png" alt="" class="best">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">5 days in Fenghuang County, Zhangjiajie, and Changsha</h5>
+                    <p>From <span>$1200</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk7.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">6 days in Chengdu, Nyingchi, Lhasa, and Shigatse</h5>
+                    <p>From <span>$899</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk8.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">6 days in Ürümqi, Dunhuang, Zhangye, Lanzhou, and Xi'an</h5>
+                    <p>From <span>$1188</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk9.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">5 days in Ngawa Tibetan and Qiang Autonomous Prefecture...</h5>
+                    <p>From <span>$988</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk10.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">5 days in Fenghuang County, Zhangjiajie, and Changsha</h5>
+                    <p>From <span>$1200</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk11.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">6 days in Chengdu, Nyingchi, Lhasa, and Shigatse</h5>
+                    <p>From <span>$988</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/image/pk12.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">6 days in Ürümqi, Dunhuang, Zhangye, Lanzhou, and Xi'an</h5>
+                    <p>From <span>$1188</span>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="more">
+        <button type="button" class="btn btn-secondary btn-lg"><strong>VIEW ALL</strong></button>
+    </div>
+
+    <img src="assets/image/Frame.png" alt="frame" class="center">
+
+    <div class="china">
+        <h3 style="text-align: center; margin-bottom: 40px">TOP DESTINATIONS IN CHINA</h3>
+        <div class="grid-china">
+
+            <div class="card text-white" style="position: relative;">
+                <img src="assets/image/beijing.png" class="card-img" alt="...">
+                <div class="card-overlay">
+                    <h4 class="card-title">Beijing</h4>
+                    <p>China's capital & home to major sites such as the Forbidden City palace complex &
+                        Tiananmen Square.</p>
+                </div>
+            </div>
+
+            <div class="card text-white" style="position: relative;">
+                <img src="assets/image/xian.png" class="card-img" alt="...">
+                <div class="card-overlay">
+                    <h4 class="card-title">Xi'an</h4>
+                    <p>An ancient Chinese dynastic capital, Xi'an is home to Big Wild Goose Pagoda & the
+                        Terra Cotta Army.</p>
+                </div>
+            </div>
+
+            <div class="card text-white" style="position: relative;">
+                <img src="assets/image/guilin.png" class="card-img" alt="...">
+                <div class="card-overlay">
+                    <h4 class="card-title">Guilin</h4>
+                    <p>Southern Chinese town with hilly karst landscape, twin pagodas & boat tours on Cedar
+                        & Banyan lakes.</p>
+                </div>
+            </div>
+
+            <div class="card text-white">
+                <img src="assets/image/guangzhou.png" class="card-img" alt="...">
+                <div class="card-overlay">
+                    <h4 class="card-title">Guangzhou</h4>
+                    <p>Large Chinese city featuring modern architecture & colonial homes on Shamian
+                        Island.</p>
+                </div>
+            </div>
+
+            <div class="card text-white">
+                <img src="assets/image/hangzhou.png" class="card-img" alt="...">
+                <div class="card-overlay">
+                    <h4 class="card-title">Hangzhou</h4>
+                    <p>Chinese city famed for its expansive West Lake, its Grand Canal & nearby Longjin tea
+                        producers.</p>
+                </div>
+            </div>
+
+            <div class="card text-white">
+                <img src="assets/image/zhangjiajie.png" class="card-img" alt="...">
+                <div class="card-overlay">
+                    <h4 class="card-title">Zhangjiajie</h4>
+                    <p>Gateway to Wulingyuan Scenic Area, with 330m Bailong Elevator, Tianmen Mountain &
+                        cliff walkway.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="more">
+        <button type="button" class="btn btn-secondary btn-lg"><strong>VIEW ALL</strong></button>
+    </div>
+
+    <div class="grid-ads" style="margin-top: 30px">
+
+        <div class="ads-container" style="padding-right: 0; padding-left: 0">
+            <img src="assets/image/Rectangle%209.1.png" alt="" style="width:100%;">
+            <!--                <div class="bottom-left"></div>-->
+            <!--                <div class="top-left"></div>-->
+            <!--                <div class="top-right"></div>-->
+            <!--                <div class="bottom-right"></div>-->
+            <div class="centered">
+                <h2>Discover Cities</h2>
+                <a href="#" class="btn btn-primary">DETAILS</a>
+            </div>
+        </div>
+
+        <div class="ads-container" style="padding-right: 0; padding-left: 0">
+            <img src="assets/image/Rectangle%209.2.png" alt="" style="width:100%;">
+            <!--                <div class="bottom-left"></div>-->
+            <!--                <div class="top-left"></div>-->
+            <!--                <div class="top-right"></div>-->
+            <!--                <div class="bottom-right"></div>-->
+            <div class="centered">
+                <h2>Discover Traditional</h2>
+                <a href="#" class="btn btn-primary">DETAILS</a>
+            </div>
+        </div>
+
+    </div>
+
+    <img src="assets/image/Frame.png" alt="frame" class="center">
+
+    <div class="review">
+        <h3 style="text-align: center; margin-bottom: 40px">CUSTOMER REVIEWS</h3>
+        <div class="grid-review">
+            <div class="review-container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="quote">
+                            <img src="assets/image/quote.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-text">What a lovely day made special by our guide and her knowledge and
+                                humour.
+                                Agathe was ably assisted by Vincent - for the day - and we had a really lovely time,
+                                specially the final picnic on the laws at Chambord - what a treat!</p>
+                            <img src="assets/image/rate.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="customer">
+                    <div class="ava">
+                        <img src="assets/image/customer1.png" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="customer-name">
+                            <div class="name"><h5>Cristina Ana</h5></div>
+                            <p><small class="text-muted">• 24/05/2019</small></p>
+                        </div>
+                        <p class="card-text">From Tours:
+                            <span>5 days in Fenghuang Country, Zhangjiajie and Changsha</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="quote">
+                            <img src="assets/image/quote.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-text">What a lovely day made special by our guide and her knowledge and
+                                humour.
+                                Agathe was ably assisted by Vincent - for the day - and we had a really lovely time,
+                                specially the final picnic on the laws at Chambord - what a treat!</p>
+                            <img src="assets/image/rate.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="customer">
+                    <div class="ava">
+                        <img src="assets/image/customer2.png" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="customer-name">
+                            <h5>Cristina Ana </h5>
+                            <p><small class="text-muted">• 24/05/2019</small></p>
+                        </div>
+                        <p class="card-text">From Tours: <span>7 days in Beijing, Xi'an, Guilin and Shanghai</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="quote">
+                            <img src="assets/image/quote.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-text">What a lovely day made special by our guide and her knowledge and
+                                humour.
+                                Agathe was ably assisted by Vincent - for the day - and we had a really lovely time,
+                                specially the final picnic on the laws at Chambord - what a treat!</p>
+                            <img src="assets/image/rate.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="customer">
+                    <div class="ava">
+                        <img src="assets/image/customer3.png" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="customer-name">
+                            <h5>Cristina Ana </h5>
+                            <p><small class="text-muted">• 24/05/2019</small></p>
+                        </div>
+                        <p class="card-text">From Tours: <span>6 days in Chengdu, Nyingchi, Lhasa and Shigatse</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="app">
+        <div class="app-container">
+            <img src="assets/image/Mask%20Group.png" alt="" id="img1">
+            <div class="left">
+                <div class="app-content">
+                    <div class="app-intro">
+                        <h1>Your all-in-one travel app</h1>
+                        <p>Meaningful travel experiences begin with Gopanda. Browse destination reviews and
+                            upgrade your trips by booking homes, apartments and rooms for rent on our great
+                            online platform.</p>
+                    </div>
+                    <div class="download">
+                        <img src="assets/image/qr.png" alt="">
+                        <div class="store">
+                            <a href=""><img src="assets/image/appstore.png" alt="" class="appstore" style="top: 0"></a>
+                            <a href=""><img src="assets/image/ggplay.png" class="appstore" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="assets/image/app.png" alt="" id="img2">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="grid-footer">
+
+            <div class="footer-container" id="col-ft1">
+                <h6><strong>Language</strong></h6>
+                <div class="nav-item dropdown select-country">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <img src="assets/image/us.png" alt=""> English (United States)
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#"><img src="assets/image/us.png" alt=""> English (United
+                            States)</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="assets/image/2.png" alt=""> Vietnamese</a></li>
+                    </ul>
+                </div>
+
+                <br>
+                <h6><strong>Currency</strong></h6>
+                <div class="nav-item dropdown select-country">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <img src="assets/image/$.png" alt=""> USD
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#"><img src="assets/image/$.png" alt=""> USD</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="assets/image/$.png" alt=""> VND</a></li>
+                    </ul>
+                </div>
+
+                <br>
+            </div>
+
+            <div class="footer-container" id="col-ft2">
+                <h6 class="footer_title"><strong>About</strong></h6>
+                <ul class="footer_linklists">
+                    <li><a href="" title="">About Gopanda.com</a></li>
+                    <li><a href="" title="">Service Guarantee</a></li>
+                    <li><a href="" title="">Careers</a></li>
+                    <li><a href="" title="">Temrs of Use</a></li>
+                    <li><a href="" title="">Privacy Statement</a></li>
+                </ul>
+                <br>
+            </div>
+
+            <div class="footer-container" id="col-ft3">
+                <h6 class="footer_title"><strong>Other Service</strong></h6>
+                <ul class="footer_linklists">
+                    <li><a href="" title="i">Investor Relations</a></li>
+                    <li><a href="" title="">Gopanda Rewards Program</a></li>
+                    <li><a href="" title="">Partners</a></li>
+                </ul>
+                <br>
+            </div>
+
+            <div class="footer-container" id="col-ft4">
+                <h6 class="footer_title"><strong>Contact Us</strong></h6>
+                <ul class="footer_linklists">
+                    <li><a href="/" title="Website Feedback">Website Feedback</a></li>
+                    <li><a href="/" title="Customer Support">Customer Support</a></li>
+                    <li><a href="" style="margin-right: 20px"><img src="assets/image/fb.png" alt=""></a><a
+                            href="" style="margin-right: 20px"><img src="assets/image/twitter.png"
+                                                                    alt=""></a><a
+                            href=""><img src="assets/image/ins.png" alt=""></a></li>
+                </ul>
+                <br>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <hr>
+                <div class="copyright_footer display_flex justify-content-spbetween">
+                    <div class="copyright_text copyright_col" style="text-align: center">© Copyright 2018 GoPanda. All rights reserved</div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
